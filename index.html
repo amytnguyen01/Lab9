@@ -90,6 +90,28 @@
 
     })
 
+    // Console dirxml
+    errorBtns[3].addEventListener('click', () => {
+
+      console.dirxml(document.body);
+
+    })
+
+    // Console Group Start
+    const label = 'Console Group'
+
+    errorBtns[4].addEventListener('click', () => {
+
+      console.group(label);
+      console.info('This')
+      console.info('is');
+      console.info('a');
+      console.info('console');
+      console.info('group');
+
+    })
+
+
 
 
 
