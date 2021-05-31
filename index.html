@@ -126,6 +126,40 @@
 
     })
 
+    // Start Timer
+    errorBtns[7].addEventListener('click', () => {
+
+      console.time();
+      console.log('The timer has started.')
+
+    })
+
+    // End Timer 
+    errorBtns[8].addEventListener('click', () => {
+
+      console.log('The timer has ended');
+      console.timeEnd();
+
+    })
+
+    // Console Trace
+    errorBtns[9].addEventListener('click', () => {
+
+      const test = () => { haha(); };
+      const haha = () => { hehe(); };
+      const hehe = () => { huhu(); };
+      const huhu = () => { console.trace(); };
+      test();
+
+    })
+
+    errorBts[10].addEventListener('click', () => {
+
+
+
+    })
+
+    
 
 
 
