@@ -65,8 +65,37 @@
       output.innerHTML = eval(`${firstNum} ${operator} ${secondNum}`);
     });
 
+
     let errorBtns = Array.from(document.querySelectorAll('#error-btns > button'));
     // TODO - Make buttons functional
+
+    // Console Log Demo
+    errorBtns[0].addEventListener('click', () => {
+
+      console.log('Console log demo.');
+
+    })
+
+    // Console Error Demo
+    errorBtns[1].addEventListener('click', () => {
+
+      console.error('Wrong button!')
+
+    })
+
+
+
+    errorBts[10].addEventListener('click', () => {
+
+
+
+    })
+
+
+
+
+
+
   </script>
 </body>
 </html>
