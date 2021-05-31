@@ -153,12 +153,25 @@
 
     })
 
+    // Part 5 (10th button)
     errorBts[10].addEventListener('click', () => {
+      
+      window.onerror = function(message, source, lineno, colno, error) {
+        console.log("Global Error Function");
+      }
 
+      throw new InputError("Global Error");
 
+      // Error monitoring service (TrackJS)
+      TrackJS.track('Testing TrackJS');
 
     })
 
+    
+
+    // Part 3
+
+    
     
 
 
