@@ -55,6 +55,15 @@
     <button>Trigger a Global Error</button>
   </section>
 
+  <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
+  <script>
+    window.TrackJS && TrackJS.install({ 
+      token: "075be619891842fa96125feb6ce8cd99"
+      // for more configuration options, see https://docs.trackjs.com
+    });
+  </script>
+                        
+
   <script>
     let calculateBtn = document.querySelector('#calculate');
     calculateBtn.addEventListener('click', () => {
@@ -153,6 +162,25 @@
 
     })
 
+
+    // Part 4 Extends error object to use a custom error type
+    // https://javascript.info/custom-errors
+
+    class ErrorClass extends Error{
+
+      constructor(message){
+
+        super(message);
+        this.name = "ErrorClass";
+
+      }
+
+    }
+
+    // Part 3 
+
+
+
     // Part 5 (10th button)
     errorBts[10].addEventListener('click', () => {
       
@@ -160,20 +188,12 @@
         console.log("Global Error Function");
       }
 
-      throw new InputError("Global Error");
+      throw new ErrorClass("Global Error");
 
       // Error monitoring service (TrackJS)
-      TrackJS.track('Testing TrackJS');
+      TrackJS.track('Testing TrackJS!');
 
     })
-
-    
-
-    // Part 3
-
-    
-    
-
 
 
 
