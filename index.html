@@ -179,6 +179,50 @@
 
     // Part 3 
 
+    // Create a new funcion that helps throw the error
+
+    function TestError()[
+
+      throw new ErrorClass("Hello I am throwing an input error");
+
+    ]
+
+    // Try catch
+
+    try{
+
+      // Uses the function we created above to throw an error
+      TestError();
+    }
+
+    catch(err){
+
+      console.log(err.message);
+
+      try{
+
+        if(err instanceof ErrorClass){
+
+          console.log("Catch");
+          throw new ErrorClass("Another error??"); 
+          console.log("Okay we are throwing another error");
+
+        }
+      }
+      
+      catch(newerror){
+
+        console.log("Catching another error");
+
+      }
+
+    }
+
+    finally{
+
+      console.log("Done!");
+
+    }
 
 
     // Part 5 (10th button)
